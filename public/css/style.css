@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: #1e1e1e;
+    color: #cccccc;
+}
+
+.container{
+    margin: 4rem auto;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Rubik Vinyl', cursive;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-shadow: 0 0 2rem #483d8b75;
+}
+
+ul{
+    margin-top: 2rem;
+    font-size: 1.5rem;   
+    list-style-type: none;
+}
+
+.wishlist li{
+    background-color: #332d58;
+    border: 2px solid #826fff50;
+    border-radius: 3rem;
+    padding: 0.25rem;
+    margin-top: 0.75rem;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.wishlist li:hover{
+    transition: 0.25s;
+    background-color: #443c79;
+    box-shadow: 0 0 0.5rem #826fff80;
+}
+
+button{
+    background-color: #483d8b;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem #483d8b;
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 1rem;
+}
+
+button:hover{
+    box-shadow: 0 0 0.5rem #826fff;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:active{
+    box-shadow: 0 0 1rem #826fff;
+}
+
+#inputText{
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem #483d8b;
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 1rem;
+    outline: none;
+}
+
+#inputText:hover{
+    box-shadow: 0 0 0.5rem #826fff;
+    transition: 0.25s;
+}
+
+#inputText:focus{
+    outline: #826fff;
+    box-shadow: 0 0 1rem #826fff;
+    transition: 0.5s;
+}
+
+#inputImage{
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 1rem;
+    outline: none;
+    width: 25rem;
+}
+
+::-webkit-file-upload-button{
+    background-color: #483d8b;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.25rem #483d8b;
+    color: #cccccc;
+    font-size: 1.5rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+::-webkit-file-upload-button:hover{
+    background-color: #574ba0;
+    box-shadow: 0 0 0.25rem #826fff;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+img{
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    margin: 0 auto;
+    object-fit: cover;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wishlist{
+    margin-left: 26.25%;
+    margin-right: 26.25%;
+}

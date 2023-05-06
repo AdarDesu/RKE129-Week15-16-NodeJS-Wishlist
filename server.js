@@ -1,0 +1,42 @@
+const express = require("express");
+const multer = require("multer");
+const path = require("path");
+const Wish = require("./model/wish");
+
+const app = express();
+
+app.set("view engine", "ejs");
+app.use(express.urlencoded({extended: true}));
+app.use(express.static("public"));
+app.use(express.static("images"));
+
+let upload = multer({
+    storage: multer.diskStorage({
+        destination: (req, file, callBack) => {
+            callBack(null, "./images");
+        },
+        filename: function(req, file, callBack) {
+            callBack(null, file.filename + "-" + Date.now() + path.extname(file.originalname));
+        }
+    })
+});
+
+app.get("/", (req, res) => {
+    Wish.fetchAllWishes(wishesFromFile => {
+        console.log(wishesFromFile);
+        res.render("index", {myWishes: wishesFromFile});
+    });
+});
+
+app.post("/wish", upload.single("userFile"), (req, res) => {
+    let userData = req.body.userWish;
+    let newWish = new Wish(userData, req.file.filename);
+    newWish.saveWish();
+    res.redirect("./");
+});
+
+const port = 5000;
+
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}.`);
+});
